@@ -20,7 +20,7 @@ For local plugin evaluation, copy this complete repository to `~/.cursor/plugins
 
 ## Preview status
 
-The package has passed local manifest, structure and archive checks. Installation in Cursor, OAuth sign-in and live tool calls have not yet been tested. This repository does not establish a Cursor Marketplace listing.
+The package has passed local manifest, structure and archive checks. Installation in Cursor, OAuth sign-in and live tool calls have been tested by the publisher. This repository does not establish a Cursor Marketplace listing.
 
 ## Links
 
