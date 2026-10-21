@@ -1,0 +1,20 @@
+{
+  "name": "fjordova.ai",
+  "displayName": "Fjordova.ai",
+  "version": "1.0.0",
+  "description": "Ask Cursor about your Fortnox books and let it propose changes. Nothing changes until the proposal is confirmed at your company's confirmation level. Sign in with your own Fortnox account.",
+  "author": {
+    "name": "Gobrand och Borggren AB",
+    "email": "support@fjordova.com"
+  },
+  "publisher": "Gobrand och Borggren AB",
+  "homepage": "https://fjordova.ai",
+  "keywords": [
+    "fortnox",
+    "accounting",
+    "invoices",
+    "sweden"
+  ],
+  "logo": "assets/logo.png",
+  "mcpServers": "mcp.json"
+}
