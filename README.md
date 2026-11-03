@@ -1,31 +1,43 @@
-# Fjordova.ai for Cursor
+# Fjordova for Cursor
 
-Ask Cursor about your Fortnox books and let it propose changes. Nothing changes until the proposal is confirmed at your company's confirmation level. Sign in with your own Fortnox account.
+Connect Cursor to the business systems and data sources enabled for your Fjordova account. Ask questions about the data you can access and, where supported, prepare changes for review. Proposals follow your company's selected confirmation level before execution.
 
-Published by Gobrand och Borggren AB (559605-3032). Support: support@fjordova.com.
+Publisher: Gobrand och Borggren AB (559605-3032). Support: support@fjordova.com.
 
-## Requirements
+## Availability
 
-You need a Fortnox account and access to the company and modules you want to use. Available tools depend on the company's selected modules and your Fortnox permissions. Read each proposed change before confirming it.
+The shared Fjordova MCP endpoint is `https://mcp.fjordova.ai/mcp`.
+
+Fortnox is the existing production integration. Spiris and additional sources, including Bolagsverket, must not be considered available through this connector until production activation and end-to-end access have been verified. Installation, OAuth sign-in and tool calls from Cursor through the shared endpoint are still awaiting verification.
+
+The tools you can use depend on your connected systems, selected company, enabled modules, licences and permissions. A shared URL does not grant access to an unconnected system.
 
 ## Connect
 
-[Add Fjordova.ai to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=Fjordova.ai&config=eyJ1cmwiOiJodHRwczovL21jcC5mam9yZG92YS5haS9mb3J0bm94L21jcCJ9)
+[Add Fjordova to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=Fjordova&config=eyJ1cmwiOiJodHRwczovL21jcC5mam9yZG92YS5haS9tY3AifQ%3D%3D)
 
-This link adds the remote MCP configuration. Follow the OAuth sign-in flow and select the intended Fortnox company. No API key or static client secret is included in this package.
+The link adds the Fjordova MCP configuration. Complete OAuth sign-in and check the selected company and granted access. The package contains no API key or static client secret.
 
-MCP server: `https://mcp.fjordova.ai/fortnox/mcp`
+If you have an older system-specific connection, create a new OAuth connection for the shared endpoint. Changing a URL does not transfer the previous authorization. Check that the new connection works before removing the old one.
 
-For local plugin evaluation, copy this complete repository to `~/.cursor/plugins/local/fjordova.ai`, reload Cursor and open Customize. Your organization's settings may restrict local plugins. See [Cursor's local plugin instructions](https://cursor.com/docs/plugins#test-plugins-locally).
+To evaluate the plugin locally, copy the repository to `~/.cursor/plugins/local/fjordova.ai`, reload Cursor and open Customize. Your organization's settings may restrict local plugins. See [Cursor's plugin instructions](https://cursor.com/docs/plugins#test-plugins-locally).
 
-## Preview status
+## Try it
 
-The package has passed local manifest, structure and archive checks. Installation in Cursor, OAuth sign-in and live tool calls have been tested by the publisher. This repository does not establish a Cursor Marketplace listing.
+- Which company and connected systems can I access?
+- Summarize the information available for my selected company.
+- If supported, prepare a proposed customer update and show the preview without executing it.
+
+Review each proposal before confirmation. Depending on your company's settings, the AI app may confirm a change after your approval in the conversation, or you may need to confirm it on a Fjordova page. Do not assume that every change requires a separate webpage confirmation.
+
+## Verification status
+
+This package is a candidate for the shared endpoint. Historical tests using a system-specific endpoint do not verify this connection. The repository does not establish publication or approval in Cursor Marketplace. See [STATUS.md](STATUS.md) for the current validation record.
 
 ## Links
 
 - [Website](https://fjordova.ai)
-- [Setup and support](https://fjordova.ai/koppla)
+- [Connection guide and support](https://fjordova.ai/koppla)
 - [Privacy policy](https://fjordova.ai/integritetspolicy)
-- [Service terms](https://fjordova.ai/villkor)
+- [Terms of service](https://fjordova.ai/villkor)
 - [Data processing agreement](https://fjordova.ai/personuppgiftsbitradesavtal)
