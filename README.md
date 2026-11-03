@@ -1,35 +1,43 @@
-# Fjordova för Cursor
+# Fjordova for Cursor
 
-Fråga Cursor om din bokföring och låt den föreslå ändringar via Fjordova. Förslag bekräftas enligt företagets bekräftelsenivå. Logga in med ditt eget Fortnox-konto.
+Connect Cursor to the business systems and data sources enabled for your Fjordova account. Ask questions about the data you can access and, where supported, prepare changes for review. Proposals follow your company's selected confirmation level before execution.
 
-Utgivare: Gobrand och Borggren AB (559605-3032). Support: support@fjordova.com.
+Publisher: Gobrand och Borggren AB (559605-3032). Support: support@fjordova.com.
 
-## System som stöds
+## Availability
 
-Den generella Fjordova-adressen ger i dag åtkomst till **Fortnox**. Spiris är ännu inte tillgängligt via den här adressen.
+The shared Fjordova MCP endpoint is `https://mcp.fjordova.ai/mcp`.
 
-Du behöver ett Fortnox-konto och åtkomst till det företag och de moduler du vill använda. Tillgängliga verktyg beror på företagets valda moduler, licenser och dina Fortnox-behörigheter. Läs varje ändringsförslag innan du bekräftar det.
+Fortnox is the existing production integration. Spiris and additional sources, including Bolagsverket, must not be considered available through this connector until production activation and end-to-end access have been verified. Installation, OAuth sign-in and tool calls from Cursor through the shared endpoint are still awaiting verification.
 
-## Anslut
+The tools you can use depend on your connected systems, selected company, enabled modules, licences and permissions. A shared URL does not grant access to an unconnected system.
 
-[Lägg till Fjordova i Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=Fjordova&config=eyJ1cmwiOiJodHRwczovL21jcC5mam9yZG92YS5haS9tY3AifQ%3D%3D)
+## Connect
 
-Länken lägger till konfigurationen för Fjordovas MCP-server. Följ OAuth-inloggningen och välj rätt Fortnox-företag. Paketet innehåller ingen API-nyckel eller statisk klienthemlighet.
+[Add Fjordova to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=Fjordova&config=eyJ1cmwiOiJodHRwczovL21jcC5mam9yZG92YS5haS9tY3AifQ%3D%3D)
 
-MCP-server: `https://mcp.fjordova.ai/mcp`
+The link adds the Fjordova MCP configuration. Complete OAuth sign-in and check the selected company and granted access. The package contains no API key or static client secret.
 
-Har du redan en anslutning till `https://mcp.fjordova.ai/fortnox/mcp` behöver du göra en ny OAuth-anslutning för den generella adressen. Enbart ett URL-byte flyttar inte det tidigare samtycket. Kontrollera att den nya anslutningen fungerar innan du tar bort den gamla.
+If you have an older system-specific connection, create a new OAuth connection for the shared endpoint. Changing a URL does not transfer the previous authorization. Check that the new connection works before removing the old one.
 
-För lokal utvärdering av pluginet: kopiera hela repot till `~/.cursor/plugins/local/fjordova.ai`, ladda om Cursor och öppna Customize. Organisationens inställningar kan begränsa lokala pluginer. Se [Cursors instruktioner](https://cursor.com/docs/plugins#test-plugins-locally).
+To evaluate the plugin locally, copy the repository to `~/.cursor/plugins/local/fjordova.ai`, reload Cursor and open Customize. Your organization's settings may restrict local plugins. See [Cursor's plugin instructions](https://cursor.com/docs/plugins#test-plugins-locally).
 
-## Verifieringsstatus
+## Try it
 
-Installation i Cursor, OAuth-inloggning och verktygsanrop behöver verifieras med den generella adressen. Tidigare prov med Fortnox-adressen verifierar inte den här anslutningen. Repot innebär ingen bekräftad listning i Cursor Marketplace.
+- Which company and connected systems can I access?
+- Summarize the information available for my selected company.
+- If supported, prepare a proposed customer update and show the preview without executing it.
 
-## Länkar
+Review each proposal before confirmation. Depending on your company's settings, the AI app may confirm a change after your approval in the conversation, or you may need to confirm it on a Fjordova page. Do not assume that every change requires a separate webpage confirmation.
 
-- [Webbplats](https://fjordova.ai)
-- [Anslutning och support](https://fjordova.ai/koppla)
-- [Integritetspolicy](https://fjordova.ai/integritetspolicy)
-- [Tjänstevillkor](https://fjordova.ai/villkor)
-- [Personuppgiftsbiträdesavtal](https://fjordova.ai/personuppgiftsbitradesavtal)
+## Verification status
+
+This package is a candidate for the shared endpoint. Historical tests using a system-specific endpoint do not verify this connection. The repository does not establish publication or approval in Cursor Marketplace. See [STATUS.md](STATUS.md) for the current validation record.
+
+## Links
+
+- [Website](https://fjordova.ai)
+- [Connection guide and support](https://fjordova.ai/koppla)
+- [Privacy policy](https://fjordova.ai/integritetspolicy)
+- [Terms of service](https://fjordova.ai/villkor)
+- [Data processing agreement](https://fjordova.ai/personuppgiftsbitradesavtal)
